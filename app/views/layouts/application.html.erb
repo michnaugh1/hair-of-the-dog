@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= @pagetitle || (@page && @page.title) || 'Hair of the Dog Grooming' %></title>
+<%= stylesheet_link_tag 'hairofthedog1' %>
+<%= javascript_include_tag :defaults %> 
+</head>
+<body>
+	<div id='pagewrapper'>
+		<div id='header'>
+<%= flashobject_tag "/swf/blue_banner1.swf", :size => "800x304" %> 
+		</div>
+		<div id='navbar'>
+			<ul>
+		
+			<% @tabs.each do |page| -%>
+				<li><%= link_to page.title, view_page_path(page.name) %></li>
+			<% end -%>
+			<li><a href="#" class="parent">Links &nbsp &nbsp</a>
+				<ul>
+				<li><a href="http://www.grooming.net">Grooming.net</a></li>
+				<li><a href="http://www.petfinder.com">Pet Finder</a></li>
+				<li><a href="http://www.aspca.org">ASPCA</a></li>
+				<li><a href="http://www.nationaldoggroomers.com">National Dog Groomers Assoc.</a></li>
+				</ul>
+			</li>
+			<li><%= mail_to "meaghan@hairofthedoggrooming.biz", "Email" %></li>
+			<li><% if logged_in? %>
+					<%= link_to "Log Out", logout_path %>
+				<% end %>
+				</li>
+			</ul>
+</div>
+
+		<div id='leftlist'>
+		<%= flashobject_tag "/swf/dogs1.swf", :size => "165x550" %> 
+</div>
+
+
+
+		<div>
+		<div id='logo'>
+			<img src="images/logo.jpg" alt="Hair of the Dog" style="align="center" height="88" width="400">
+		</div>
+	</div>
+	<div id='list'>
+
+	<span class="class1">
+		<h2><%= flash[:notice] %></h2>
+ 		<%= yield %>
+	</div>
+	</span>
+	
+	<div id='footer'>
+		<p>Copyright © 2008 Hair of the Dog Grooming., All rights reserved.</p>
+	</div>
+</body>
+</html>

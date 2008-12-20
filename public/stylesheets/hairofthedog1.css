@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+}
+#pagewrapper {
+    width: 800px;
+    margin: 10px auto;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#logo {
+	float: center;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 12px;
+}
+#content {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	
+}
+#header {
+	position: static;
+	width: 800px;
+	height: 304px;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 0;
+}
+.class1 a:link {
+	text-decoration: none}
+.class1 a:visited {
+	text-decoration: none}
+.class1 a:active {
+	text-decoration: none}
+.class1 a:hover {
+	text-decoration: underline; 
+	color: red;
+	}
+#header p {
+    padding: 20px 10px;
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#heads {
+	width: 313px;
+	height: 254px;
+}
+
+#footer {
+    background-color: #4c4c4c;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    clear:both;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+#footer p, #footer a {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight:bold;
+    margin: 0;
+    padding: 2px;
+}
+#list {
+	float: right;
+	width: 590px;
+	background-color: #white;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	text-align: left;
+	font-size: 16px;
+	color: black;
+}
+
+#leftlist {
+	float: left;
+	width: 165px;
+	height: 550px;
+	text-align: left;
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+
+/* Begin CSS Drop Down Menu */
+#navbar-container {
+	position: absolute;		
+	top: 1em;
+	left: 1em;
+	}
+	
+#navbar ){
+	
+}
+
+#navbar ul {
+    padding: 0;
+	margin: 0;
+    color: White;
+    float: left;
+	background-color: #4c4c4c;
+    width: 100%;
+    list-style: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+#navbar ul li { 
+    display: inline;
+    color: White;
+    float: left;
+    border-right: 1px solid #333;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#navbar ul li a {
+    padding: 0.2em 0.7em;
+    background-color: #4c4c4c; 
+    color: White;
+    text-decoration: none;
+    float:left;
+}
+#navbar ul li a:hover {
+    background-color: #97a9ee;
+    color: #000000;
+}
+		
+#navbar a
+	{
+	text-align: center;
+	display:block;
+	border: 1px solid #555;
+	white-space:nowrap;
+	margin:0;
+	padding: 0.3em;
+	}
+	
+#navbar a:link /* menu at rest */
+	{
+	color: white;
+	background-color: #4c4c4c;
+	text-decoration:none;
+	}
+
+#navbar a:visited, 
+	{
+		color: white;
+		background-color: #4c4c4c;
+		text-decoration:none;
+	}
+#navbar a:active	
+	{
+	color: white;
+	background-color: #4c4c4c;
+	text-decoration:none;
+	}
+	
+#navbar a:hover	/* menu at mouse-over  */
+	{
+	color: white;
+	background-color: #97a9ee;
+	text-decoration:none;
+	}	
+	
+#navbar a.top_parent, #navbar a.top_parent:hover  /* attaches down-arrow to all top-parents */
+	{
+	background-image: url(/images/navdown_white.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	}
+	
+#navbar a.parent, #navbar a.parent:hover 	/* attaches side-arrow to all parents */
+	{
+	background-image: url(/images/nav_white.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	}
+
+#navbar li
+	{
+	position:relative;
+    min-height: 1px; 			/* Sophie Dennis contribution for IE7 */
+    vertical-align: bottom; /* Sophie Dennis contribution for IE7 */
+	}
+
+#navbar ul ul
+	{
+	width: 150px;
+	height: 95px;
+	position:absolute;
+	z-index:500;
+	background-color: transparent;
+	top:auto;
+	display:none;
+	padding: .2em;
+	margin: 1.7em 0 0 -.2em;
+	}
+
+#navbar ul ul ul
+	{
+	top:0;
+	left:100%;
+	}
+
+div#navbar li:hover
+	{
+	cursor:pointer;
+	z-index:100;
+	}
+
+div#navbar li:hover ul ul,
+div#navbar li li:hover ul ul,
+div#navbar li li li:hover ul ul,
+div#navbar li li li li:hover ul ul
+{display:none;}
+
+div#navbar li:hover ul,
+div#navbar li li:hover ul,
+div#navbar li li li:hover ul,
+div#navbar li li li li:hover ul
+{display:block;}
+
+/* End CSS Drop Down Menu */
